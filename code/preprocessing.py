@@ -1,6 +1,7 @@
 # Import necessary libraries
 import re
 import pandas as pd
+import pickle
 from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_selection import SelectKBest, chi2
 from xgboost import XGBClassifier
@@ -61,3 +62,7 @@ X_train = train_df['statement'].tolist()
 y_train = train_df['encoded_status']
 X_test = test_df['statement'].tolist()
 y_test = test_df['encoded_status']
+
+# Save label encoder
+with open('label_encoder.pkl', 'wb') as f:
+    pickle.dump(label_encoder, f)
