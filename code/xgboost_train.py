@@ -41,3 +41,13 @@ xgb_clf.fit(X_train_selected, y_train)
 # Predict and evaluate
 y_pred = xgb_clf.predict(X_test_selected)
 print(classification_report(y_test, y_pred))
+
+# Save the model and vectorizer
+with open('tfidf_vectorizer.pkl', 'wb') as f:
+    pickle.dump(vectorizer, f)
+    
+with open('selector.pkl', 'wb') as f:
+    pickle.dump(selector, f)
+    
+with open('xgboost_model.pkl', 'wb') as f:
+    pickle.dump(xgb_clf, f)
