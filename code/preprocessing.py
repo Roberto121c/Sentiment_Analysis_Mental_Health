@@ -38,8 +38,7 @@ def preprocess_text(text, stemmer):
 # Load data
 df = pd.read_csv(FILE_PATH)
 
-# Filter and encode labels
-df = df[~df['status'].isin(['Stress', 'Personality disorder'])][['status', 'statement']].reset_index(drop=True)
+# Encode labels
 label_encoder = LabelEncoder()
 df['encoded_status'] = label_encoder.fit_transform(df['status'])
 
