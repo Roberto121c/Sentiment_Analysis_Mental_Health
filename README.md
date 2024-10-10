@@ -5,7 +5,7 @@
 * Preprocessed the text, did feature engineering and apply TF-IDF as bag of words
 * After tunning I saved and tested the model with a 82% accuracy
 
-![](https://github.com/Roberto121c/Sentiment_Analysis_Mental_Health/blob/main/images/anxiety.png)
+![](/images/anxiety.png)
 
 ### Exploratory Data Analysis
 * Understanded and analized the distribution of mental health statuses in the dataset
@@ -14,7 +14,7 @@
   
 See the full code [HERE](https://github.com/Roberto121c/Sentiment_Analysis_Mental_Health/blob/main/code/EDA.py)
 
-![](https://github.com/Roberto121c/Sentiment_Analysis_Mental_Health/blob/main/images/distribution.png)
+![](images/distribution.png)
   
 ### Data Preprocessing
 * Encoded the labels and splited the data into training and test sets
