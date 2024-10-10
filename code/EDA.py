@@ -12,11 +12,22 @@ import seaborn as sns
 
 # Create a function to generate and display a word cloud
 def generate_word_cloud(text, title):
-    wordcloud = WordCloud(width=800, height=400).generate(text)
+    wordcloud = WordCloud(
+        width=800,
+        height=400,
+        background_color='white',
+        colormap='viridis',
+        max_font_size=80,
+        min_font_size=10,
+        random_state=42,
+        contour_width=2,
+        contour_color='steelblue'
+    ).generate(text)
+    
     plt.figure(figsize=(10, 5))
     plt.imshow(wordcloud, interpolation='bilinear')
-    plt.title(title)
-    plt.axis('off')
+    plt.title(title, fontsize=16, fontweight='bold')  # Add title with a bold font
+    plt.axis('off')  # Turn off axis for a clean look
     plt.show()
 
 file_path = 'sentiments_data.csv'
